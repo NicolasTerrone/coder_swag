@@ -13,15 +13,9 @@ class CategoryCell: UITableViewCell {
     @IBOutlet weak var imageCell: UIImageView!
     @IBOutlet weak var lblCell: UILabel!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func updateCell(category: Category){
+        imageCell.image = UIImage(named: category.imageName)
+        lblCell.text = category.title
     }
 
 }
